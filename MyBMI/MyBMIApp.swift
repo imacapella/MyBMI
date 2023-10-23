@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MyBMIApp: App {
+    @Environment(\.colorScheme) var colorScheme
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(.light)
         }
     }
 }

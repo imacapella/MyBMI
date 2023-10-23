@@ -5,10 +5,10 @@
 //  Created by Gürkan Karadaş on 18.10.2023.
 //
 
-import SwiftUI
+/* import SwiftUI
 
 struct CardViews: View {
-    @State var weight : Int
+    @State var weight : Double
     var rectIcon : String
     var rectText : String
     @State public var age = 30
@@ -19,19 +19,19 @@ struct CardViews: View {
             .overlay{
                 VStack{
                     Spacer()
-                    Text(rectText)
+                    Text(String(format: "%.0f",rectText))
                         .font(.title2)
                         .bold()
                         .foregroundColor(.white)
                     
                     Spacer()
-                    Text(String(weight))
+                    Text(String(format: "%.0f",weight))
                         .font(.system(size:50))
                         .bold()
                         .foregroundColor(.orange)
                     Spacer()
                     HStack{
-                        Button(action:{weight-=1}){
+                        Button(action:{weight-=1; print(weight)}){
                             Circle()
                                 .frame(width: 35, height: 35)
                                 .foregroundColor(.orange)
@@ -42,7 +42,7 @@ struct CardViews: View {
                                 }
                         }
                         
-                        Button(action:{weight+=1}){
+                        Button(action:{weight+=1; print(weight)}){
                             Circle()
                                 .frame(width: 35, height: 35)
                                 .foregroundColor(.orange)
@@ -70,9 +70,10 @@ struct CardViews: View {
         Color.darkBlue
         VStack{
             HStack{
-                CardViews(weight: 30, rectIcon: "fuelpump.circle.fill", rectText: "Weight")
-                CardViews(weight: 30, rectIcon: "fuelpump.circle.fill", rectText: "Age")
+                CardViews(weight: 50, rectIcon: "fuelpump.circle.fill", rectText: "Weight")
+                CardViews(weight: 20, rectIcon: "fuelpump.circle.fill", rectText: "Age")
             }
         }
     }.edgesIgnoringSafeArea(.all)
 }
+*/
