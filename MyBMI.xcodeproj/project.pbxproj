@@ -7,20 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6126F7542AE7E3EE001EDADC /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126F7532AE7E3EE001EDADC /* ResultView.swift */; };
+		6126F7562AE7FD18001EDADC /* BMICalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126F7552AE7FD18001EDADC /* BMICalculator.swift */; };
+		6126F7582AE7FE51001EDADC /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6126F7572AE7FE51001EDADC /* BMI.swift */; };
 		61AAE7682AE068E600C05744 /* MyBMIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AAE7672AE068E600C05744 /* MyBMIApp.swift */; };
 		61AAE76A2AE068E600C05744 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AAE7692AE068E600C05744 /* ContentView.swift */; };
 		61AAE76C2AE068E800C05744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AAE76B2AE068E800C05744 /* Assets.xcassets */; };
 		61AAE76F2AE068E800C05744 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61AAE76E2AE068E800C05744 /* Preview Assets.xcassets */; };
-		61AAE7762AE069E900C05744 /* CardViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AAE7752AE069E900C05744 /* CardViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6126F7532AE7E3EE001EDADC /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		6126F7552AE7FD18001EDADC /* BMICalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculator.swift; sourceTree = "<group>"; };
+		6126F7572AE7FE51001EDADC /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 		61AAE7642AE068E600C05744 /* MyBMI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBMI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61AAE7672AE068E600C05744 /* MyBMIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBMIApp.swift; sourceTree = "<group>"; };
 		61AAE7692AE068E600C05744 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		61AAE76B2AE068E800C05744 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61AAE76E2AE068E800C05744 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		61AAE7752AE069E900C05744 /* CardViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +38,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6126F7522AE7E3D4001EDADC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				61AAE7692AE068E600C05744 /* ContentView.swift */,
+				6126F7532AE7E3EE001EDADC /* ResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		61AAE75B2AE068E600C05744 = {
 			isa = PBXGroup;
 			children = (
@@ -53,9 +66,10 @@
 		61AAE7662AE068E600C05744 /* MyBMI */ = {
 			isa = PBXGroup;
 			children = (
+				6126F7572AE7FE51001EDADC /* BMI.swift */,
 				61AAE7672AE068E600C05744 /* MyBMIApp.swift */,
-				61AAE7692AE068E600C05744 /* ContentView.swift */,
-				61AAE7752AE069E900C05744 /* CardViews.swift */,
+				6126F7552AE7FD18001EDADC /* BMICalculator.swift */,
+				6126F7522AE7E3D4001EDADC /* Views */,
 				61AAE76B2AE068E800C05744 /* Assets.xcassets */,
 				61AAE76D2AE068E800C05744 /* Preview Content */,
 			);
@@ -140,8 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6126F7582AE7FE51001EDADC /* BMI.swift in Sources */,
 				61AAE76A2AE068E600C05744 /* ContentView.swift in Sources */,
-				61AAE7762AE069E900C05744 /* CardViews.swift in Sources */,
+				6126F7542AE7E3EE001EDADC /* ResultView.swift in Sources */,
+				6126F7562AE7FD18001EDADC /* BMICalculator.swift in Sources */,
 				61AAE7682AE068E600C05744 /* MyBMIApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
