@@ -10,8 +10,8 @@ import SwiftUI
 
 struct BMICalculator {
     
-    var height = 0.0
-    var weight = 0.0
+    var height: Float = 0.0
+    var weight: Float = 0.0 
     var bmi: BMI?
     
     mutating func calculateBMI(height: Float, weight: Float) {

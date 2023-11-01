@@ -8,115 +8,96 @@
 import SwiftUI
 
 struct ResultView: View {
+    @Environment(\.presentationMode) var presentationMode
     @State var bmi : BMICalculator
     @State var infoButton = false
     @State var isShowingPopup = false
     
+    
+    
     var body: some View {
-        GeometryReader { geo in
-            ZStack {
-                Color.orange.opacity(0.8)
-                    .edgesIgnoringSafeArea(.all)
+        ZStack {
+            bmiChanges()
+                .opacity(0.8)
+                .edgesIgnoringSafeArea(.all)
+            
+            VStack{
                 
-                VStack{
+                HStack {
                     Spacer()
-                    Text("\(bmi.getBMIValue())")
-                        .font(Font.system(size: 80, design: .rounded).weight(.heavy))
-                        .foregroundColor(.white)
-                    
-                    
-                    let customWidth = geo.size.width / 1.5
-                    
-                    // Progress bar with colors
-                    ZStack(alignment: .leading) {
-                        Rectangle().frame(width: customWidth, height: 20)
-                            .foregroundColor(Color(.black).opacity(0.5))
-                        Rectangle().frame(width: (40/50)*customWidth, height: 20)
-                            .foregroundColor(.red)
-                        Rectangle().frame(width: (30/50)*customWidth, height: 20)
-                            .foregroundColor(.orange)
-                        Rectangle().frame(width: (25/50)*customWidth, height: 20)
-                            .foregroundColor(.green)
-                        Rectangle().frame(width: (18.5/50)*customWidth, height: 20)
-                            .foregroundColor(.blue)
-                    }.cornerRadius(10).overlay{
-                        if bmi.getBMIValue() <= 18.5{
-                            RoundedRectangle(cornerRadius: 45)
-                                .stroke(Color.blue, lineWidth: 7)
-                        }
-                        else if bmi.getBMIValue() <= 25 && bmi.getBMIValue() > 18.5{
-                            RoundedRectangle(cornerRadius: 45)
-                                .stroke(Color.green, lineWidth: 7)
-                        }
-                        else if bmi.getBMIValue() <= 30 && bmi.getBMIValue() > 25{
-                            RoundedRectangle(cornerRadius: 45)
-                                .stroke(Color.orange, lineWidth: 7)
-                        }
-                        else if bmi.getBMIValue() <= 40 && bmi.getBMIValue() > 30{
-                            RoundedRectangle(cornerRadius: 45)
-                                .stroke(Color.red, lineWidth: 7)
-                        }
-                        else{
-                            RoundedRectangle(cornerRadius: 45)
-                                .stroke(Color.black, lineWidth: 7)
-                        }
-                            
-                    }
-                    
-                    Spacer()
-                    
-                    Button(action:{infoButton.toggle()}){
-                        if infoButton == false{
-                            Image(systemName: "info.bubble")
-                                .foregroundColor(.white)
-                                .fontWeight(.bold)
-                                .font(.system(size: 30))
-                        }
-                        else{
-                            HStack {
-                                Button(action:{}){
-                                    if infoButton == true{
-                                        Image(systemName: "info.bubble")
-                                            .foregroundColor(.white)
-                                            .fontWeight(.bold)
-                                            .font(.system(size: 30))
-                                            .onTapGesture {
-                                                withAnimation(.easeIn(duration: 0.3)) {
-                                                    infoButton.toggle()
-                                                }
-                                            }
-                                    }
-                                    Circle()
-                                        .stroke(Color.white, lineWidth: 4)
-                                        .background(Circle().fill(Color.blue))
-                                        .frame(width: 30, height: 30)
-                                    Circle()
-                                        .stroke(Color.white, lineWidth: 4)
-                                        .background(Circle().fill(Color.green))
-                                        .frame(width: 30, height: 30)
-                                    Circle()
-                                        .stroke(Color.white, lineWidth: 4)
-                                        .background(Circle().fill(Color.orange))
-                                        .frame(width: 30, height: 30)
-                                    Circle()
-                                        .stroke(Color.white, lineWidth: 4)
-                                        .background(Circle().fill(Color.red))
-                                        .frame(width: 30, height: 30)
-                                    Circle()
-                                        .stroke(Color.white, lineWidth: 4)
-                                        .background(Circle().fill(Color.black))
-                                        .frame(width: 30, height: 30)
-                                }.padding(.horizontal)
-                            }
-                        }
-                    }
-                    
+                    Button(action:{presentationMode.wrappedValue.dismiss()}){
+                        Image(systemName: "x.circle.fill")
+                            .foregroundColor(.white)
+                            .font(.system(size: 30))
+                    }.padding(.trailing,40).padding(.top,40)
                 }
+                Spacer()
+                Text("\(bmi.getBMIValue())")
+                    .font(Font.system(size: 80, design: .rounded).weight(.heavy))
+                    .foregroundColor(.white)
+                HStack {
+                    Text("You Are")
+                        .font(.system(size: 20))
+                        .foregroundColor(.white)
+                    Text("\(getWeightClass())")
+                        .fontWeight(.heavy)
+                        .font(.system(size: 20))
+                        .foregroundColor(.white)
+                }
+                Spacer()
+                Button(action:{presentationMode.wrappedValue.dismiss()}){
+                    RoundedRectangle(cornerRadius: 15)
+                        .frame(width: 340, height: 60)
+                        .foregroundColor(bmiChanges().opacity(0.6))
+                        .overlay{
+                            Text("Recalculate")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                        }
+                }.padding()
             }
+            Spacer()
+            
         }
     }
+    
+    fileprivate func getWeightClass() -> String {
+        switch bmi.bmi?.classification {
+        case .underweight:
+            return "Underweight"
+        case .healthy:
+            return "Healthy"
+        case .overweight:
+            return "Overweight"
+        case .obese:
+            return "Obese"
+        case .extremelyObese:
+            return "Extremely Obese"
+        default:
+            return "Unknown"
+        }
+    }
+    
+    fileprivate func bmiChanges() -> Color {
+        if bmi.getBMIValue() <= 18.5{
+            return Color.blue
+        }
+        else if bmi.getBMIValue() <= 25 && bmi.getBMIValue() > 18.5{
+            return Color.green
+        }
+        else if bmi.getBMIValue() <= 30 && bmi.getBMIValue() > 25{
+            return Color.orange
+        }
+        else if bmi.getBMIValue() <= 40 && bmi.getBMIValue() > 30{
+            return Color.red
+        }
+        else{
+            return Color.black.opacity(0.6)
+        }
+    }
+    
 }
-
 
 
 #Preview {
