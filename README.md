@@ -17,10 +17,20 @@ This is a simple BMI (Body Mass Index) Calculator application built using SwiftU
 
 ## Screenshots
 
-***<img width="311" alt="image" src="(https://github.com/imacapella/MyBMI/assets/101065086/603af388-16ed-4bb2-a5b9-8d56a3f58be2)
-">
-<img width="311" alt="image" src="(https://github.com/imacapella/MyBMI/assets/101065086/a0be69e5-0517-4bc3-958d-f26c529b7055)
-">
-<img width="311" alt="image" src="(https://github.com/imacapella/MyBMI/assets/101065086/430c66de-5684-49f7-a132-75b1a223d06c)
-">
-<img width="311" alt="image" src="(https://github.com/imacapella/MyBMI/assets/101065086/d370a04a-fb03-4999-93ce-49713ca976e8)">***
+***<img src="https://github.com/imacapella/Peracom-Mobile/assets/101065086/4c2193ff-6ef2-40e7-8189-9300bd00e977" width="311" />
+<img src="https://github.com/imacapella/Peracom-Mobile/assets/101065086/e2c45174-a6f6-4c37-abe1-79ee6668fed5" width="311" />***
+
+***<img src="https://github.com/imacapella/MyBMI/assets/101065086/3002ca8b-90e0-43a7-b6f7-6abe60c027b1" width="311" />
+<img src="https://github.com/imacapella/MyBMI/assets/101065086/657bd7b6-3a44-47fb-ab39-6f9a3375a0a8" width="311" />***
+
+***<img src="https://github.com/imacapella/MyBMI/assets/101065086/62bab005-ec87-4c71-ab64-9d0714869d7b" width="311" />
+<img src="https://github.com/imacapella/MyBMI/assets/101065086/4b398a12-c804-4609-a25c-121835002c8f" width="311" />***
+
+***<img src="https://github.com/imacapella/MyBMI/assets/101065086/6232bf7a-7eb5-47b8-9282-c8d315d844a3" width="311" />
+<img src="https://github.com/imacapella/MyBMI/assets/101065086/cb78630d-9a21-4005-87eb-e8e90e5e41b3" width="311" />***
+
+
+
+
+
+
