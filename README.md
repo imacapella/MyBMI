@@ -16,10 +16,10 @@ This is a simple BMI (Body Mass Index) Calculator application built using SwiftU
 3. Build and run the application on the desired simulator or device.
 
 ## Screenshots
-![Screenshot 1](![Simulator Screenshot - iPhone 15 Pro - 2023-11-03 at 13 23 31](https://github.com/imacapella/MyBMI/assets/101065086/6e077e32-316f-4582-a9a4-b9d9754c6c8e)
-) ![Screenshot 2](![Simulator Screenshot - iPhone 15 Pro - 2023-11-03 at 13 23 34](https://github.com/imacapella/MyBMI/assets/101065086/f00eb6ee-dc86-4a43-9f7a-1bfc2a4a0a16)
-)
-
-![Screenshot 3](![Simulator Screenshot - iPhone 15 Pro - 2023-11-03 at 13 23 13](https://github.com/imacapella/MyBMI/assets/101065086/7a8f8533-dd95-4e07-ac9b-c5945c75bc14)
-) ![Screenshot 4](![Simulator Screenshot - iPhone 15 Pro - 2023-11-03 at 13 23 18](https://github.com/imacapella/MyBMI/assets/101065086/485776bb-50f7-4b00-bfb7-57f6a480a13d)
-)
+***<img width="311" alt="image" src="![Simulator Screenshot - iPhone 15 Pro - 2023-11-03 at 13 23 31](https://github.com/imacapella/MyBMI/assets/101065086/603af388-16ed-4bb2-a5b9-8d56a3f58be2)
+">
+<img width="311" alt="image" src="![Simulator Screenshot - iPhone 15 Pro - 2023-11-03 at 13 23 34](https://github.com/imacapella/MyBMI/assets/101065086/a0be69e5-0517-4bc3-958d-f26c529b7055)
+">
+<img width="311" alt="image" src="![Simulator Screenshot - iPhone 15 Pro - 2023-11-03 at 13 23 13](https://github.com/imacapella/MyBMI/assets/101065086/430c66de-5684-49f7-a132-75b1a223d06c)
+">
+<img width="311" alt="image" src="![Simulator Screenshot - iPhone 15 Pro - 2023-11-03 at 13 23 18](https://github.com/imacapella/MyBMI/assets/101065086/d370a04a-fb03-4999-93ce-49713ca976e8)">***
