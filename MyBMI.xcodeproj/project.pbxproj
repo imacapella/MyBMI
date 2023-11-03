@@ -66,8 +66,8 @@
 		61AAE7662AE068E600C05744 /* MyBMI */ = {
 			isa = PBXGroup;
 			children = (
-				6126F7572AE7FE51001EDADC /* BMI.swift */,
 				61AAE7672AE068E600C05744 /* MyBMIApp.swift */,
+				6126F7572AE7FE51001EDADC /* BMI.swift */,
 				6126F7552AE7FD18001EDADC /* BMICalculator.swift */,
 				6126F7522AE7E3D4001EDADC /* Views */,
 				61AAE76B2AE068E800C05744 /* Assets.xcassets */,

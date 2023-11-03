@@ -32,14 +32,14 @@ struct ResultView: View {
                     }.padding(.trailing,40).padding(.top,40)
                 }
                 Spacer()
-                Text("\(bmi.getBMIValue())")
+                Text(bmi.calculateBMI(height: bmi.height, weight: bmi.weight))
                     .font(Font.system(size: 80, design: .rounded).weight(.heavy))
                     .foregroundColor(.white)
                 HStack {
                     Text("You Are")
                         .font(.system(size: 20))
                         .foregroundColor(.white)
-                    Text("\(getWeightClass())")
+                    Text(getWeightClass())
                         .fontWeight(.heavy)
                         .font(.system(size: 20))
                         .foregroundColor(.white)
@@ -63,33 +63,32 @@ struct ResultView: View {
     }
     
     fileprivate func getWeightClass() -> String {
-        switch bmi.bmi?.classification {
-        case .underweight:
+        if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) < 18.5 {
             return "Underweight"
-        case .healthy:
-            return "Healthy"
-        case .overweight:
+        } else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) < 25 {
+            return "Healty"
+        } else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) < 30 {
             return "Overweight"
-        case .obese:
+        } else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) < 40 {
             return "Obese"
-        case .extremelyObese:
-            return "Extremely Obese"
-        default:
+        }else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) < 40 {
+            return "Extra Obese"
+        }else {
             return "Unknown"
         }
     }
     
     fileprivate func bmiChanges() -> Color {
-        if bmi.getBMIValue() <= 18.5{
+        if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) <= 18.5{
             return Color.blue
         }
-        else if bmi.getBMIValue() <= 25 && bmi.getBMIValue() > 18.5{
+        else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) <= 25 && bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) > 18.5{
             return Color.green
         }
-        else if bmi.getBMIValue() <= 30 && bmi.getBMIValue() > 25{
+        else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) <= 30 && bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) > 25{
             return Color.orange
         }
-        else if bmi.getBMIValue() <= 40 && bmi.getBMIValue() > 30{
+        else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) <= 40 && bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) > 30{
             return Color.red
         }
         else{

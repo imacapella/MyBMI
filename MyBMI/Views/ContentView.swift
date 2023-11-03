@@ -13,14 +13,10 @@ struct ContentView: View {
     @State var isPresentedPopup = false
     var body: some View {
         ZStack {
-            Color.black
-                .edgesIgnoringSafeArea(.all)
-            AnimatedBackground()
+            LinearGradient(gradient: Gradient(colors: [Color("purpleHighlight"), Color("purpleLight"), Color("purpleDark")]), startPoint: .bottomLeading, endPoint: .topTrailing)
                 .edgesIgnoringSafeArea(.all)
                 .blur(radius: 25)
-                .scaleEffect(1.2)
-                .opacity(0.9)
-            
+                .scaleEffect(1.3)
             VStack {
                 Spacer()
                 Text("Welcome To MyBMI")
@@ -110,53 +106,6 @@ struct ContentView: View {
     
     func getWeight(kg:Float) -> String {
         return "\(String(format: "%.0f", kg)) kg"
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    struct AnimatedBackground: View {
-        
-        @State var start = UnitPoint(x: 0, y: -2)
-        @State var end = UnitPoint(x: 4, y: 0)
-        
-        let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
-        let colors = [Color(.black), Color(.black), Color("purpleDark"), Color("purpleLight"), Color("purpleHighlight")]
-        
-        var body: some View {
-            
-            LinearGradient(gradient: Gradient(colors: colors), startPoint: start, endPoint: end)
-                .animation(Animation.easeInOut(duration: 10).repeatForever())
-                .onReceive(timer, perform: { _ in
-                    self.start = UnitPoint(x: 4, y: 0)
-                    self.end = UnitPoint(x: 0, y: 2)
-                    self.start = UnitPoint(x: -4, y: 20)
-                    self.start = UnitPoint(x: 4, y: 0)
-                })
-        }
     }
 }
     

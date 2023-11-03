@@ -11,9 +11,6 @@ import SwiftUI
 struct BMI {
     let classification: WeightClass
     let value: Float
-    let advice: String
-    let symbol: String
-    let color: Color
 }
 
 enum WeightClass {
