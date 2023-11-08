@@ -69,7 +69,7 @@ struct ResultView: View {
             return "Healty"
         } else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) < 30 {
             return "Overweight"
-        } else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) < 40 {
+        } else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) < 35 {
             return "Obese"
         }else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) < 40 {
             return "Extra Obese"
@@ -88,7 +88,10 @@ struct ResultView: View {
         else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) <= 30 && bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) > 25{
             return Color.orange
         }
-        else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) <= 40 && bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) > 30{
+        else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) <= 35 && bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) > 30{
+            return Color.red.opacity(0.7)
+        }
+        else if bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) <= 50 && bmi.calculateBMIFloat(height: bmi.height, weight: bmi.weight) > 30{
             return Color.red
         }
         else{
