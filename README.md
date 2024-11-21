@@ -30,7 +30,13 @@ This is a simple BMI (Body Mass Index) Calculator application built using SwiftU
 <img src="https://github.com/imacapella/MyBMI/assets/101065086/cb78630d-9a21-4005-87eb-e8e90e5e41b3" width="311" />***
 
 
+## Contact
 
+For any questions or feedback, you can reach me at:
+
+- Email: gurkankaradas42@gmail.com
+- GitHub: [@imacapella](https://github.com/imacapella)
+- LinkedIn: [Gürkan Karadaş](linkedin.com/gurkankaradas)
 
 
 
